@@ -43,5 +43,6 @@ public class Weblogger {
 
         outputs.forEach(System.out::println);
         System.out.println();
+        scanner.close();
     }
 }
