@@ -49,6 +49,8 @@ public class GoldBars {
   }
 
   public static void main(String[] args) {
+
+    //long beforeUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
     Scanner scanner = new Scanner(System.in);
     int N;
     String[] lineArgs;
@@ -86,6 +88,9 @@ public class GoldBars {
     System.out.println(cities.get(0).calculateTotalDistance(null));
 
     scanner.close();
+
+    //long afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+    //System.out.println((afterUsedMem-beforeUsedMem) + " bytes");
   }
 
 }
