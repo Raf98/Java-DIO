@@ -1,0 +1,1 @@
+select * from person inner join person_phones on person.id = person_phones.person_id inner join phone on phone.id = person_phones.phones_id;
