@@ -1,4 +1,4 @@
-# Gerenciador de salas de reunioes
+# Gerenciador de salas de reuniões
 
 ## Stack utilizada:
 
@@ -28,8 +28,6 @@ DELETE - /api/v1/rooms/{Id}
 
 
 [Live Digital Innovation One dessa aplicação](https://www.youtube.com/watch?v=_2gRnfJeyMM)
-
-[slides - em breve]()
 
 
 
