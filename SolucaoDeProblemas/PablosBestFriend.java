@@ -38,21 +38,12 @@ public class PablosBestFriend {
             answer = lineArgs[1];
 
             boolean isDuplicate = false;
-            for (var student : studentsYes) {
-                if (student.equals(name)) {
-                    isDuplicate = true;
-                    break;
-                }
-            }
-            for (var student : studentsNo) {
-                if (student.equals(name)) {
-                    isDuplicate = true;
-                    break;
-                }
+            if(studentsYes.contains(name) || studentsNo.contains(name)){
+              isDuplicate = true;
             }
 
-            if (!isDuplicate && !name.equals("Abhay")) {//condicao do Abhay adicionar graças a um bug 
-                if (answer.equals("SIM")) {             //na saida desse problema na DIO    
+            if (!isDuplicate/* && !name.equals("Abhay")*/) {
+                if (answer.equals("SIM")) {
                     studentsYes.add(name);
                 } else {
                     studentsNo.add(name);
