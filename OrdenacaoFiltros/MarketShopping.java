@@ -32,7 +32,7 @@ public class MarketShopping {
           testCaseNoDuplicates.append(item + " ");
       }
 
-      arrayItems.add(testCaseNoDuplicates.toString());
+      arrayItems.add(testCaseNoDuplicates.toString().trim());
 
       testCaseArray = new ArrayList<>();
     }
