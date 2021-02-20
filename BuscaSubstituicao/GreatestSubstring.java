@@ -26,6 +26,7 @@ public class GreatestSubstring {
     scanner.close();
   }
 
+  /*
   static boolean checkStringAcceptable(char[] chars1) {
     short countLetters = 0;
 
@@ -43,7 +44,7 @@ public class GreatestSubstring {
     }
 
     return true;
-  }
+  }*/
 
   static int checkGreatestSubstringLength(String str1, CharSequence str2) {
 
@@ -53,15 +54,19 @@ public class GreatestSubstring {
     for (int i = 0; i < str2.length(); i++) {
       if (str1.contains(Character.toString(str2.charAt(i)))) {
         localSubstringLength = 1;
-        StringBuilder subString = new StringBuilder(str2.charAt(i));
+        StringBuilder subString = new StringBuilder(String.valueOf(str2.charAt(i)));
+        // System.out.println("Initial substr " + subString.toString());
 
         for (int j = i + 1; j < str2.length(); j++) {
-          subString.append(str2.charAt(j));
+          subString.append(String.valueOf(str2.charAt(j)));
+
           if (!str1.contains(subString)) {
             break;
           }
           localSubstringLength++;
         }
+
+        //System.out.println("Local sbstr len: " + localSubstringLength);
 
         if (localSubstringLength > greatestSubstringLength) {
           greatestSubstringLength = localSubstringLength;
